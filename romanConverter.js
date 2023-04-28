@@ -17,12 +17,10 @@ function convertToRoman(num) {
   let roman = "";
   for (const key in nums) {
     const division = Math.floor(num / nums[key]);
-    if (division > 0) {
-    }
-    console.log("division >>>", division);
     roman += key.repeat(division);
     num = num % nums[key];
   }
   return roman;
 }
 
+console.log(convertToRoman(99));
